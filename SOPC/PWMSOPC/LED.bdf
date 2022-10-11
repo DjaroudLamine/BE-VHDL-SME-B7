@@ -1,0 +1,208 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+*/
+(header "graphic" (version "1.4"))
+(pin
+	(input)
+	(rect 208 344 384 360)
+	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
+	(text "pin_name1" (rect 9 0 62 12)(font "Arial" ))
+	(pt 176 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12))
+		(line (pt 92 4)(pt 117 4))
+		(line (pt 121 8)(pt 176 8))
+		(line (pt 92 12)(pt 92 4))
+		(line (pt 117 4)(pt 121 8))
+		(line (pt 117 12)(pt 121 8))
+	)
+	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 152 360 208 384))
+)
+(pin
+	(input)
+	(rect 128 128 400 144)
+	(text "INPUT" (rect 229 0 257 10)(font "Arial" (font_size 6)))
+	(text "bp_external_connection_export[1..0]" (rect 5 0 183 12)(font "Arial" ))
+	(pt 272 8)
+	(drawing
+		(line (pt 188 12)(pt 213 12))
+		(line (pt 188 4)(pt 213 4))
+		(line (pt 217 8)(pt 272 8))
+		(line (pt 188 12)(pt 188 4))
+		(line (pt 213 4)(pt 217 8))
+		(line (pt 213 12)(pt 217 8))
+	)
+	(text "VCC" (rect 232 7 252 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 64 144 128 168))
+)
+(pin
+	(output)
+	(rect 24 504 296 520)
+	(text "OUTPUT" (rect 233 6 271 16)(font "Arial" (font_size 6)))
+	(text "led_external_connection_export[7..0]" (rect 5 4 185 16)(font "Arial" ))
+	(pt 272 8)
+	(drawing
+		(line (pt 272 8)(pt 220 8))
+		(line (pt 220 12)(pt 194 12))
+		(line (pt 220 4)(pt 194 4))
+		(line (pt 220 4)(pt 220 12))
+		(line (pt 194 12)(pt 190 8))
+		(line (pt 190 8)(pt 194 4))
+		(line (pt 194 4)(pt 190 8))
+	)
+	(rotate180)
+	(annotation_block (location)(rect 296 520 360 544))
+)
+(pin
+	(output)
+	(rect 216 600 392 616)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "pin_name2" (rect 90 0 143 17)(font "Intel Clear" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(symbol
+	(rect 512 240 1008 464)
+	(text "Bp_Led" (rect 226 -1 277 15)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 208 25 220)(font "Arial" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "bp_external_connection_export[1..0]" (rect 0 0 208 14)(font "Arial" (font_size 8)))
+		(text "bp_external_connection_export[1..0]" (rect 4 61 212 75)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 192 72)(line_width 3))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "clk_clk" (rect 0 0 37 14)(font "Arial" (font_size 8)))
+		(text "clk_clk" (rect 4 101 41 115)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 192 112))
+	)
+	(port
+		(pt 0 152)
+		(output)
+		(text "led_external_connection_export[7..0]" (rect 0 0 211 14)(font "Arial" (font_size 8)))
+		(text "led_external_connection_export[7..0]" (rect 4 141 215 155)(font "Arial" (font_size 8)))
+		(line (pt 0 152)(pt 192 152)(line_width 3))
+	)
+	(port
+		(pt 0 192)
+		(output)
+		(text "out_pwm_writeresponsevalid_n" (rect 0 0 184 14)(font "Arial" (font_size 8)))
+		(text "out_pwm_writeresponsevalid_n" (rect 4 181 188 195)(font "Arial" (font_size 8)))
+		(line (pt 0 192)(pt 192 192))
+	)
+	(drawing
+		(text "bp_external_connection" (rect 56 43 210 58)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 197 67 227 79)(font "Arial" (color 0 0 0)))
+		(text "clk" (rect 177 83 194 98)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 197 107 211 119)(font "Arial" (color 0 0 0)))
+		(text "led_external_connection" (rect 53 123 211 138)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 197 147 227 159)(font "Arial" (color 0 0 0)))
+		(text "out_pwm" (rect 139 163 199 178)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "writeresponsevalid_n" (rect 197 187 299 199)(font "Arial" (color 0 0 0)))
+		(text " Bp_Led " (rect 460 208 503 220)(font "Arial" ))
+		(line (pt 192 32)(pt 304 32))
+		(line (pt 304 32)(pt 304 208))
+		(line (pt 192 208)(pt 304 208))
+		(line (pt 192 32)(pt 192 208))
+		(line (pt 193 52)(pt 193 76))
+		(line (pt 194 52)(pt 194 76))
+		(line (pt 193 92)(pt 193 116))
+		(line (pt 194 92)(pt 194 116))
+		(line (pt 193 132)(pt 193 156))
+		(line (pt 194 132)(pt 194 156))
+		(line (pt 193 172)(pt 193 196))
+		(line (pt 194 172)(pt 194 196))
+		(line (pt 0 0)(pt 496 0))
+		(line (pt 496 0)(pt 496 224))
+		(line (pt 0 224)(pt 496 224))
+		(line (pt 0 0)(pt 0 224))
+	)
+)
+(connector
+	(pt 384 352)
+	(pt 512 352)
+)
+(connector
+	(pt 504 312)
+	(pt 504 136)
+	(bus)
+)
+(connector
+	(pt 512 312)
+	(pt 504 312)
+	(bus)
+)
+(connector
+	(pt 504 136)
+	(pt 400 136)
+	(bus)
+)
+(connector
+	(pt 512 392)
+	(pt 368 392)
+	(bus)
+)
+(connector
+	(pt 368 392)
+	(pt 368 512)
+	(bus)
+)
+(connector
+	(pt 296 512)
+	(pt 368 512)
+	(bus)
+)
+(connector
+	(pt 216 608)
+	(pt 176 608)
+	(bus)
+)
+(connector
+	(pt 176 608)
+	(pt 176 576)
+	(bus)
+)
+(connector
+	(pt 176 576)
+	(pt 440 576)
+	(bus)
+)
+(connector
+	(pt 440 576)
+	(pt 440 432)
+	(bus)
+)
+(connector
+	(pt 440 432)
+	(pt 512 432)
+	(bus)
+)
