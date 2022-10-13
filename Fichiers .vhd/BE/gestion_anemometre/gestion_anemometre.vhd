@@ -18,14 +18,15 @@ port	(
 			data_anemometre: out std_logic_vector(7 downto 0);
 			
 			visu_val_cpt : out std_logic_vector(7 downto 0);
-			etat_mae_MAE : out std_logic_vector(2 downto 0);
-			etat_mae_cpt : out std_logic_vector(2 downto 0)
+			--etat_mae_cpt : out std_logic_vector(2 downto 0);
+			etat_mae_MAE : out std_logic_vector(2 downto 0)
+			
 		);
 End gestion_anemometre;
 
 Architecture ar of gestion_anemometre is
 
-Signal iout_timer_1s, ien_timer_1s, ireset_timer_1s, ien_cpt, i_data_valid : std_logic;
+Signal iout_timer_1s, ien_timer_1s, ireset_timer_1s, ien_cpt, i_data_valid,ireset_cpt : std_logic;
 Signal ival_cpt_fronts, i_data_anemometre: std_logic_vector(7 downto 0);
 
 Begin
@@ -37,11 +38,12 @@ port map	(
 		
 		continu				=> continu,
 		start_stop			=> start_stop,
-		
 	
 		timer_1s			=> iout_timer_1s,
 		en_timer			=> ien_timer_1s,
+		
 		reset_timer 		=> ireset_timer_1s,
+		reset_cpt			=> ireset_cpt,
 		
 		val_cpt_fronts		=>ival_cpt_fronts,
 		en_cpt_fronts		=> ien_cpt,
@@ -60,8 +62,9 @@ port	map(
 			
 			en => ien_cpt,
 			in_signal => in_freq_anenometre,
+			reset=> ireset_cpt,
 			val_cpt => ival_cpt_fronts,
-			etat_pres	=> etat_mae_cpt
+			etat_pres	=> open--etat_mae_cpt--
 			
 		);
 
@@ -90,7 +93,6 @@ port map	(
 		);
 
 data_valid <= i_data_valid;
-
 visu_val_cpt <= ival_cpt_fronts;
 
 End ar;
